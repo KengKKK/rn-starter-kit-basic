@@ -16,7 +16,6 @@ const BottomTabNavigation = createBottomTabNavigator(
         tabBarIcon: () => <Icon name="cached" size={25} />,
       }),
     },
-    // Favorite: {screen: FavoriteRoute},
     Home: {
       screen: HomeRoute,
       navigationOptions: () => ({
@@ -24,7 +23,6 @@ const BottomTabNavigation = createBottomTabNavigator(
         tabBarIcon: () => <Icon name="home" size={25} />,
       }),
     },
-    // FoodStory: {screen: StoryRoute},
     Contact: {
       screen: ContactRoute,
       navigationOptions: () => ({
