@@ -13,28 +13,37 @@ const BottomTabNavigation = createBottomTabNavigator(
       screen: MenuRoute,
       navigationOptions: () => ({
         headerRight: null,
-        tabBarIcon: () => <Icon name="cached" size={25} />,
+        tabBarIcon: () => <Icon name="search" size={25} />,
       }),
     },
     Home: {
       screen: HomeRoute,
       navigationOptions: () => ({
         headerRight: null,
-        tabBarIcon: () => <Icon name="home" size={25} />,
+        tabBarIcon: ({focused}) => (
+          <Icon
+            name={focused ? 'home' : 'favorite'}
+            size={25}
+            color={focused ? '#f26522' : 'black'}
+          />
+        ),
       }),
     },
     Contact: {
       screen: ContactRoute,
       navigationOptions: () => ({
         headerRight: null,
-        tabBarIcon: () => <Icon name="build" size={25} />,
+        tabBarIcon: ({focused}) => (
+          <Icon name="build" size={25} color={focused ? '#f26522' : 'black'} />
+        ),
       }),
     },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Menu',
     tabBarOptions: {
-      activeTintColor: '#f26522',
+      activeTintColor: '#3bb54a',
+
       labelStyle: {
         fontSize: 12,
       },
